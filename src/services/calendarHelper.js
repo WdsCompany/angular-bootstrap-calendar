@@ -159,7 +159,7 @@ angular
         events: events,
         viewDate: viewDate,
         excluded: excluded,
-        weekStartsOn: moment().startOf('week').day()
+        weekStartsOn: 1
       });
 
       view.days = view.days.map(function(day) {
@@ -188,7 +188,7 @@ angular
       var days = calendarUtils.getWeekViewHeader({
         viewDate: viewDate,
         excluded: excluded,
-        weekStartsOn: moment().startOf('week').day()
+        weekStartsOn: 1
       }).map(function(day) {
         day.date = moment(day.date);
         day.weekDayLabel = formatDate(day.date, calendarConfig.dateFormats.weekDay);
@@ -201,7 +201,7 @@ angular
 
       var eventRows = calendarUtils.getWeekView({
         viewDate: viewDate,
-        weekStartsOn: moment().startOf('week').day(),
+        weekStartsOn: 1,
         excluded: excluded,
         events: filterEventsInPeriod(events, startOfWeek, endOfWeek).map(function(event) {
 
